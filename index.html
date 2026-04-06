@@ -1,12 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioPhD | Research Homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.72); }
+    .hero-bg {
+      background:
+        radial-gradient(circle at top left, rgba(16,185,129,0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(59,130,246,0.16), transparent 24%),
+        linear-gradient(180deg, #f0fdf4 0%, #eff6ff 48%, #ffffff 100%);
+    }
+  </style>
 </head>
-<body>
-  <p>Hello, World!</p>
+<body class="bg-slate-50 text-slate-800">
+  <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="#home" class="text-lg font-semibold tracking-tight text-slate-900">BioPhD</a>
+      <nav class="hidden gap-6 text-sm text-slate-600 md:flex">
+        <a href="#about" class="transition hover:text-emerald-600">소개</a>
+        <a href="#research" class="transition hover:text-emerald-600">연구</a>
+        <a href="#publications" class="transition hover:text-emerald-600">성과</a>
+        <a href="#projects" class="transition hover:text-emerald-600">프로젝트</a>
+        <a href="#contact" class="transition hover:text-emerald-600">연락처</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero-bg">
+    <div class="mx-auto grid min-h-[88vh] max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-2">
+      <div>
+        <span class="inline-flex rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700">Biology · Biotechnology · Synthetic Biology</span>
+        <h1 class="mt-6 text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">
+          바이오 박사과정 연구자를 위한<br />
+          전문 연구 홈페이지
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          연구 주제, 논문, 실험 기술, 협업 프로젝트, 학문적 비전을 한 곳에서 소개할 수 있는 개인 연구 홈페이지 템플릿입니다.
+          박사과정 연구자의 정체성과 연구 방향이 명확하게 드러나도록 설계했습니다.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#research" class="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5">연구 보기</a>
+          <a href="#contact" class="rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-emerald-400 hover:text-emerald-700">연락하기</a>
+        </div>
+        <div class="mt-10 grid grid-cols-3 gap-4">
+          <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <p class="text-2xl font-bold text-slate-900">3+</p>
+            <p class="mt-1 text-sm text-slate-500">핵심 연구 분야</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <p class="text-2xl font-bold text-slate-900">10+</p>
+            <p class="mt-1 text-sm text-slate-500">프로젝트 경험</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <p class="text-2xl font-bold text-slate-900">24/7</p>
+            <p class="mt-1 text-sm text-slate-500">연구와 학습</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass rounded-[2rem] border border-white/60 p-6 shadow-xl shadow-slate-200/60">
+        <div class="rounded-[1.5rem] bg-slate-900 p-6 text-white">
+          <p class="text-sm uppercase tracking-[0.2em] text-emerald-300">Research Focus</p>
+          <h2 class="mt-3 text-2xl font-semibold">예시 연구 분야</h2>
+          <div class="mt-6 space-y-4">
+            <div class="rounded-2xl bg-white/10 p-4">
+              <p class="font-medium">합성생물학</p>
+              <p class="mt-1 text-sm text-slate-200">유전자 회로 설계, 세포 기반 센서, 정밀 대사 조절</p>
+            </div>
+            <div class="rounded-2xl bg-white/10 p-4">
+              <p class="font-medium">대사공학</p>
+              <p class="mt-1 text-sm text-slate-200">고부가가치 화합물 생산 및 미생물 세포공장 최적화</p>
+            </div>
+            <div class="rounded-2xl bg-white/10 p-4">
+              <p class="font-medium">바이오센서 개발</p>
+              <p class="mt-1 text-sm text-slate-200">질병 관련 대사체 감지 및 whole-cell biosensor 플랫폼 구축</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-6xl px-6 py-20">
+    <section id="about" class="grid gap-8 md:grid-cols-[1.2fr_0.8fr]">
+      <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">About Me</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">연구자 소개</h2>
+        <p class="mt-6 leading-8 text-slate-600">
+          안녕하세요. 저는 바이오 관련 박사과정을 수행하며 분자생물학, 합성생물학, 대사공학, 바이오센서 개발을 중심으로 연구하고 있습니다.
+          본 홈페이지는 제 연구 비전, 현재 수행 중인 프로젝트, 연구 성과 및 협업 가능 영역을 체계적으로 소개하기 위해 제작되었습니다.
+        </p>
+        <p class="mt-4 leading-8 text-slate-600">
+          특히 미생물 기반 시스템을 활용한 질병 진단, 기능성 분자 감지, 차세대 치료 플랫폼 설계에 관심이 있으며,
+          기초 생명과학과 공학적 설계를 연결하는 연구를 지향합니다.
+        </p>
+      </div>
+      <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+        <h3 class="text-xl font-semibold text-slate-900">핵심 키워드</h3>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="rounded-full bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-700">Synthetic Biology</span>
+          <span class="rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700">Metabolic Engineering</span>
+          <span class="rounded-full bg-violet-50 px-4 py-2 text-sm font-medium text-violet-700">Whole-cell Biosensor</span>
+          <span class="rounded-full bg-amber-50 px-4 py-2 text-sm font-medium text-amber-700">Microbiome</span>
+          <span class="rounded-full bg-rose-50 px-4 py-2 text-sm font-medium text-rose-700">Protein Engineering</span>
+          <span class="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">Disease Diagnostics</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="mt-20">
+      <div class="mb-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">Research</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">연구 분야</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <article class="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+          <h3 class="text-xl font-semibold text-slate-900">합성생물학 기반 센서 설계</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            세포 내 유전자 회로와 조절 네트워크를 이용하여 특정 대사체, 환경 신호, 질병 관련 바이오마커를 감지하는 시스템을 개발합니다.
+          </p>
+        </article>
+        <article class="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+          <h3 class="text-xl font-semibold text-slate-900">대사공학 및 미생물 세포공장</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            유용 물질 생산을 위한 대사경로 재설계, 에너지 대사 최적화, 세포 수준의 생산성 향상 전략을 탐구합니다.
+          </p>
+        </article>
+        <article class="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+          <h3 class="text-xl font-semibold text-slate-900">질병 진단용 바이오플랫폼</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            장내미생물, 혈청 대사체, 염증 신호 등 질병 관련 생체신호를 정밀하게 감지하는 차세대 진단 플랫폼을 설계합니다.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="mt-20">
+      <div class="mb-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">Publications</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">논문 및 연구 성과</h2>
+      </div>
+      <div class="space-y-4">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm text-slate-500">2026</p>
+          <h3 class="mt-1 text-lg font-semibold text-slate-900">Example Publication Title One</h3>
+          <p class="mt-2 text-sm text-slate-600">저자명, 저널명, 권(호), 페이지, 연도</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm text-slate-500">2025</p>
+          <h3 class="mt-1 text-lg font-semibold text-slate-900">Example Publication Title Two</h3>
+          <p class="mt-2 text-sm text-slate-600">저자명, 저널명, 권(호), 페이지, 연도</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm text-slate-500">2024</p>
+          <h3 class="mt-1 text-lg font-semibold text-slate-900">Conference Presentation or Poster</h3>
+          <p class="mt-2 text-sm text-slate-600">학회명, 발표 형식, 장소, 연도</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="mt-20">
+      <div class="mb-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">Projects</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">현재 및 주요 프로젝트</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-xl font-semibold text-slate-900">Microbiome-based Biosensor</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            장내 미생물 유래 대사체를 감지하는 whole-cell biosensor를 설계하고, 진단 및 치료 응용 가능성을 검토하는 프로젝트입니다.
+          </p>
+        </div>
+        <div class="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-xl font-semibold text-slate-900">Engineered Microbial Cell Factory</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            표적 화합물의 고효율 생산을 위한 대사경로 재설계와 발현 시스템 최적화를 수행하는 연구입니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mt-20">
+      <div class="rounded-[2rem] border border-slate-200 bg-slate-900 px-8 py-10 text-white shadow-sm">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">Contact</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight">연락처 및 협업 문의</h2>
+        <p class="mt-4 max-w-2xl leading-8 text-slate-300">
+          공동 연구, 세미나 발표, 기술 협업, 연구 교류에 관심이 있으시면 아래 정보를 통해 연락해 주세요.
+        </p>
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          <div class="rounded-2xl bg-white/10 p-5">
+            <p class="text-sm text-slate-300">이메일</p>
+            <p class="mt-2 font-medium">yourname@university.ac.kr</p>
+          </div>
+          <div class="rounded-2xl bg-white/10 p-5">
+            <p class="text-sm text-slate-300">소속</p>
+            <p class="mt-2 font-medium">OO대학교 / OOO 연구실</p>
+          </div>
+          <div class="rounded-2xl bg-white/10 p-5">
+            <p class="text-sm text-slate-300">연구 관심사</p>
+            <p class="mt-2 font-medium">Synthetic Biology, Metabolic Engineering, Biosensors</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+      <p>© 2026 BioPhD Research Homepage. All rights reserved.</p>
+      <p>Designed for graduate-level bio research communication.</p>
+    </div>
+  </footer>
 </body>
 </html>
